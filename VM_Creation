@@ -19,6 +19,7 @@
         cluster_name: "PHX-SPOC014-3"
         script_path: ""
         subnet_name: "primary"
+        #Respecter ce nom d'image. L'image devra exister sur PC et être dispos sur le cluster cible
         image_name: "ubuntu-VM"
         password: "Password1234*"
         fqdn: "MyUbuntu"
