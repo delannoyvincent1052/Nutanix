@@ -6,7 +6,8 @@
   collections:
     - nutanix.ncp
   module_defaults:
-    group/nutanix.ncp.ntnx:
+    group/nutanix.ncp.ntnx:   
+    #Définition de la connexion à Prism Central                  
       nutanix_host: 10.38.14.137
       nutanix_username: admin
       nutanix_password: nx2Tech1234*
@@ -14,6 +15,7 @@
   tasks:
   - name: Setting Variables
     set_fact:
+    #Définition des variables qui seront utilisées dans le reste du script
         cluster_name: "PHX-SPOC014-3"
         script_path: ""
         subnet_name: "primary"
@@ -35,8 +37,8 @@
   - name: create Vm
     ntnx_vms:
       state: present
-      name: "VM_VD_Ansible"
-      desc: "ansible_vm_description"
+      name: "VM_VD_Ansible"                       
+      desc: "ansible_vm_description"              
       categories:
         AppType:
           - "Apache_Spark"
